@@ -9,5 +9,4 @@ public class ClassProductList extends ProductIterator {
 	public void accept(ReminderVisitor.NodeVisitor visitor) {
 
 	}
-
 }
