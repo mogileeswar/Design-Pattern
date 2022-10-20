@@ -8,5 +8,4 @@ public class Buyer extends Person {
 	public ProductMenu CreateProductMenu() {
 		return null;
 	}
-
 }
