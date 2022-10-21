@@ -1,10 +1,14 @@
+package online_trading;
+
+import java.util.Iterator;
+
 public class ProductIterator {
 
 	private ClassProductList classProductList;
 
-	private ClassProductList classProductList;
 
-	public boolean hasNext() {
+	public boolean hasNext(Iterator Iterator) {
+		return iterator.hasNext();
 		return false;
 	}
 
@@ -16,8 +20,8 @@ public class ProductIterator {
 
 	}
 
-	public void Remove() {
-
+	public void Remove(Iterator iterator) {
+		iterator.next();
 	}
 
 }
