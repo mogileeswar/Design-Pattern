@@ -1,3 +1,7 @@
+package online_trading;
+
+import java.util.Iterator;
+////////Iterating for iterator class/////
 public class OfferingIterator extends OfferingList {
 
 	private OfferingList offeringList;
@@ -8,15 +12,18 @@ public class OfferingIterator extends OfferingList {
 		return false;
 	}
 
-	public Offering Next() {
+	public Offering Next(Iterator iterator) {
 		return null;
 	}
 
-	public void MoveToHead() {
+	public void MoveToHead(Iterator iterator) {
 
 	}
 
-	public void Remove() {
+	public void Remove(Iterator Iterator) {
+		if (this.HasNext(iterator)){
+			iterator.next();
+		}
 
 	}
 
