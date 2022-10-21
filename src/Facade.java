@@ -1,5 +1,15 @@
-public class Facade {
+package online_trading;
 
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Iterator;
+//facade class of ptbs application
+
+public class Facade implements FacadeImplementation, Reminder{
+	//By using this class facade pattern is implemeted
+	//facade pattern is used to simplify the implementatio of larger modules using an interface
+	// In this application I used facade class as an interface layer to implement the class login,
+	//
 	private int UserType;
 
 	private Product theSelectedProduct;
@@ -10,52 +20,60 @@ public class Facade {
 
 	private Person thePerson;
 
-	public boolean login() {
-		return false;
+	private Facade()
+	public static FacadeImplementation getFacadeImplementation()
+	{
+		return new Facade();
 	}
 
-	public void addTrading() {
+	public boolean login(Login onject) {
+		return object.login();
+	}
+
+	public void addTrading(TradingMenu TRDMNU) {
+		TRDMNU.AddTrading();
+	}
+
+	public void viewTrading(TradingMenu TRDMNU, Person p) {
 
 	}
 
-	public void viewTrading() {
-
+	public void decideBidding(OfferingMenu OFRMNU) {
+		OFRMNU.decideBidding();
 	}
 
-	public void decideBidding() {
-
+	public void discussBidding(OfferingMenu OFRMNU) {
+		OFRMNU.discussBidding();
 	}
 
-	public void discussBidding() {
-
-	}
-
-	public void submitBidding() {
-
+	public void submitBidding(OfferingOMenu OFRMNU) {
+		OFRMNU.submitBidding();
 	}
 
 	public void remind() {
-
+		ReminderVisitor remind = new ReminderVisitor();
+		ProductList PL = new ProductList();
+		PL.accept(remind);
 	}
 
 	public void createUser(UserInfoItem userInfoItem) {
-
+		userinfoitem.createUser();
 	}
 
-	public void createProductList() {
-
+	public void createProductList(ProductMenu PRDMNU) {
+		PRDMNU.createProductList();
 	}
 
-	public void AttachProductToUser() {
-
+	public void AttachProductToUser(ProductMenu PRDMNU) {
+		PRDMNU.AttachProductToTheUser();
 	}
 
-	public void SelectProduct() {
-
+	public void SelectProduct(ProductMenu PRDMNU, String userName) {
+		PRDMNU.selectProduct(UseName);
 	}
 
-	public void productOperation() {
-
+	public void productOperation(ProductMenu PRDMNU) {
+		PRDMNU.ProductOperation();
 	}
 
 }
